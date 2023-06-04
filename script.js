@@ -3,7 +3,7 @@ var url = 'http://www.filltext.com/?rows=32&id=%7Bnumber%7C1000%7D&firstName=%7B
 let tableElem = document.querySelector('#table-data');
 let tbodyElem = tableElem.querySelector('tbody');
 let rowInd = tbodyElem.querySelector('tr.data-row')
-tbodyElem.replaceChildren();
+//tbodyElem.replaceChildren();
 
 let user;
 // fetch(url)
