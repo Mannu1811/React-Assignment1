@@ -2,27 +2,16 @@ var url = 'http://www.filltext.com/?rows=32&id=%7Bnumber%7C1000%7D&firstName=%7B
 
 let tableElem = document.querySelector('#table-data');
 let tbodyElem = tableElem.querySelector('tbody');
-let rowInd = tbodyElem.querySelector('tr.data-row')
-//tbodyElem.replaceChildren();
+let rowInd = tbodyElem.querySelector('tr.data-row');
+tbodyElem.replaceChildren();
 
 let user;
-// fetch(url)
-// .then(resp => resp.json())
-// .then(data => {
-// 	user = data;
-// 	loadUser();
-// })
-
-function fetchUrl() {
-	fetch(url)
-	.then(resp => resp.json())
-	.then(data => {
-		user = data;
-		loadUser();
-	})
-}
-
-setTimeout(fetchUrl, 500);
+fetch(url)
+.then(resp => resp.json())
+.then(data => {
+	user = data;
+	loadUser();
+})
 
 function showDetail() {	
 	for(let i=0; i<user.length; i++) {
